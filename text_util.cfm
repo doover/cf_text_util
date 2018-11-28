@@ -1,6 +1,11 @@
 <cfscript>
 /*
     Description: A collection of common utilities to clean up user entered text
+    
+    This is provided as-is under a basic Creative Commons license.
+    No warranty is made or implied as to the effectiveness or applicability of this code to any use.
+    
+    Original Source: https://github.com/doover/cf_text_util
 */
 
 /** stripWord
@@ -13,14 +18,14 @@
  * anything else weird left over (outside of English ASCII range)
  *
  * 	Codes stripped:
- * 				ANSII 8220 - #chr(8220)# - left quotes
- * 				ANSII 8221 - #chr(8221)# - right quotes
- * 				ANSII 8216 - #chr(8216)# - left quote
- * 				ANSII 8217 - #chr(8217)# - right quote
- * 				ANSII 8211 - #chr(8211)# - en dash
- * 				ANSII 8212 - #chr(8212)# - em dash
- * 				ANSII 8226 - #chr(8226)# - bullet
- * 				ANSII 8230 - #chr(8230)# - ellipsis
+ * 				ANSII 8220 - #chr(8220)# - left quotes with "
+ * 				ANSII 8221 - #chr(8221)# - right quotes with "
+ * 				ANSII 8216 - #chr(8216)# - left quote with '
+ * 				ANSII 8217 - #chr(8217)# - right quote with '
+ * 				ANSII 8211 - #chr(8211)# - en dash with -
+ * 				ANSII 8212 - #chr(8212)# - em dash with -
+ * 				ANSII 8226 - #chr(8226)# - bullet with *
+ * 				ANSII 8230 - #chr(8230)# - ellipsis with ...
  *
  * @text	string to strip
  * @returns	String stripped of all freak MSWord escape characters
@@ -30,14 +35,14 @@ string function stripWord(required string text)
             This function is used mostly by the cleanText() function, but is provided as a separate function for optional use during saves<br />
             This function converts weird MS Word to 'normal' text, then eliminates anything else weird left over (outside of English ASCII range)<br />
             Codes stripped:<br />
-            ANSII 8220 - #chr(8220)# - left quotes<br />
-            ANSII 8221 - #chr(8221)# - right quotes<br />
-            ANSII 8216 - #chr(8216)# - left quote<br />
-            ANSII 8217 - #chr(8217)# - right quote<br />
-            ANSII 8211 - #chr(8211)# - en dash<br />
-            ANSII 8212 - #chr(8212)# - em dash<br />
-            ANSII 8226 - #chr(8226)# - bullet<br />
-            ANSII 8230 - #chr(8230)# - ellipsis"	 {
+            ANSII 8220 - #chr(8220)# - left quotes with ""<br />
+            ANSII 8221 - #chr(8221)# - right quotes with ""<br />
+            ANSII 8216 - #chr(8216)# - left quote with '<br />
+            ANSII 8217 - #chr(8217)# - right quote with '<br />
+            ANSII 8211 - #chr(8211)# - en dash with -<br />
+            ANSII 8212 - #chr(8212)# - em dash with -<br />
+            ANSII 8226 - #chr(8226)# - bullet with *<br />
+            ANSII 8230 - #chr(8230)# - ellipsis with ..." {
 
         var returnValue = trim(arguments.text);
 
