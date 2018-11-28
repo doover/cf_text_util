@@ -28,6 +28,8 @@ The text_util.cfm package has two main components
 ### stripWord(required string text)
 MS Word loves replacing basic text with fancy unicode characters. stripWord goes through and replaces many of the special characters with their basic text equivalent and then removes all non-ascii characters from the string.
 
+stripWord() is used mostly by the cleanText() function, but is provided as a separate call if needed for other uses (we have been known to call `encodeForHTML( stripWord( TEXT_FIELD ) )` )
+
 stripWord() specifically replaces the following codes:
 ```
           ANSII 8220 - #chr(8220)# - left quotes with "
