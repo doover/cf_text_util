@@ -13,7 +13,8 @@ When the user enters data we need to "clean" the data to prevent problems from X
 
 CleanText came initially from a need to allow the user to preserve line breaks in their entered text. It was expanded to allow **bold** and *italics* and later lists.
 
-It was eventually expanded to support most of the basic editing options provided by the bare-bones CKEditor install and to allow the cleaning to be done on the server side to minimize the downloading and processing load on the client.
+It was eventually expanded to support most of the basic editing options provided by the bare-bones CKEditor install. CKEditor includes a downloadable component that will do the cleaning on the client side, but we wanted to minimze the download and processing load on the client and to allow the cleaning to be done on the server side.
+
 
 ## Other options
 
